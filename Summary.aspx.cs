@@ -13,7 +13,7 @@ namespace PrimerParcialASPNET2
         List<DataSummary> dataSummaries = new List<DataSummary>();
         protected void Page_Load(object sender, EventArgs e)
         {
-            ReadSummary("C://Users//sotoj//source//repos//PrimerParcialASPNET2//bin//Resumen.txt");
+            ReadSummary(Server.MapPath("~/Resumen.txt"));
             LoadDataSource(dataSummaries);
         }
         void LoadDataSource<T>(List<T> dataSource)

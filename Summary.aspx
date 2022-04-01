@@ -8,6 +8,6 @@
         <asp:Button ID="Button1" runat="server" Text="Ordenar" class="btn btn-primary" OnClick="Button1_Click"/>
 
         <asp:Button ID="Button2" runat="server" Text="Total de alumnos" class="btn btn-warning" OnClick="Button2_Click"/>
-
+        
     </div>
 </asp:Content>

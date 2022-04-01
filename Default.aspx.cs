@@ -15,9 +15,17 @@ namespace PrimerParcialASPNET2
         List<DataSummary> dataSummaries = new List<DataSummary>();
         protected void Page_Load(object sender, EventArgs e)
         {
-            ReadStudents("C://Users//sotoj//source//repos//PrimerParcialASPNET2//bin//Alumnos.txt");
-            ReadInscriptions("C://Users//sotoj//source//repos//PrimerParcialASPNET2//bin//Inscripciones.txt");
-            AddStudentNames();
+            ReadStudents(Server.MapPath("~/Alumnos.txt"));
+            ReadInscriptions(Server.MapPath("~/Inscripciones.txt"));
+            if (!IsPostBack)
+            {
+                DropDownList1.DataValueField = "Name";
+                DropDownList1.DataSource = students;
+                DropDownList1.DataBind();
+
+            }
+            
+            //AddStudentNames();
         }
         void AddStudentNames()
         {
@@ -107,8 +115,8 @@ namespace PrimerParcialASPNET2
                 Date = DateTime.Now
             };
             inscriptions.Add(ins);
-            WriteInscriptions("C://Users//sotoj//source//repos//PrimerParcialASPNET2//bin//Inscripciones.txt");
-            WriteSummary("C://Users//sotoj//source//repos//PrimerParcialASPNET2//bin//Resumen.txt");
+            WriteInscriptions(Server.MapPath("~/Inscripciones.txt"));
+            WriteSummary(Server.MapPath("~/Resumen.txt"));
         }
 
         protected void Button2_Click(object sender, EventArgs e)

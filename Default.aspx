@@ -27,6 +27,12 @@
         <asp:Button ID="Button1" runat="server" Text="Ingresar datos" class="btn btn-primary" OnClick="Button1_Click"/>
         <asp:Button ID="Button2" runat="server" class="btn btn-primary" OnClick="Button2_Click" Text="Ver resumen" />
     </div>
+    <%--<script>
+        myFunction();
+        function myFunction() {
+            alert("¡Bienvenido!");
+        }
+    </script>--%>
     
     
 </asp:Content>
